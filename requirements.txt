@@ -1,0 +1,10 @@
+polars>=1.0
+requests
+beautifulsoup4
+lxml
+httpx
+rapidfuzz
+scikit-learn
+xgboost
+lightgbm
+numpy

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data - raw scraped data (large, re-scrapable)
+data/raw/
+
+# Data - processed parquets (large, reproducible from raw)
+data/processed/
+
+# Data - feature matrices (large, reproducible)
+data/features/
+
+# Data - trained model artifacts (large, reproducible)
+data/models/
+
+# Keep prediction outputs and bracket (small, useful to share)
+# bracket_2026.html, bracket_2026.json, predictions_2026.* are NOT ignored
+
+# Docker
+.docker/
+
+# Misc
+*.log
+.env

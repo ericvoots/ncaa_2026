@@ -1,0 +1,15 @@
+services:
+  ncaab:
+    build: .
+    container_name: ncaab
+    volumes:
+      - ./data:/app/data
+      - ./scrapers:/app/scrapers
+      - ./etl:/app/etl
+      - ./features:/app/features
+      - ./models:/app/models
+      - ./config.py:/app/config.py
+      - ./team_index.py:/app/team_index.py
+      - ./pipeline.py:/app/pipeline.py
+    environment:
+      - PYTHONUNBUFFERED=1

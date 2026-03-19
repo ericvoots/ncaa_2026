@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 March Madness Bracket Predictions</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0a0a1a; color: #e0e0e0; padding: 20px; }
+  h1 { text-align: center; color: #fff; margin-bottom: 5px; font-size: 28px; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+  .bracket-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1400px; margin: 0 auto; }
+  .region { background: #12122a; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }
+  .region-title { font-size: 20px; font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #3a3a5a; }
+  .round { margin-bottom: 15px; }
+  .round-title { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .game { display: flex; align-items: center; margin-bottom: 6px; padding: 6px 10px; border-radius: 6px; background: #1a1a35; font-size: 13px; }
+  .game:hover { background: #22224a; }
+  .seed { display: inline-block; width: 24px; text-align: center; font-weight: 700; color: #888; font-size: 12px; }
+  .team { flex: 1; margin-left: 6px; }
+  .team.winner { color: #4ade80; font-weight: 600; }
+  .team.loser { color: #666; }
+  .vs { color: #555; margin: 0 8px; font-size: 11px; }
+  .prob { font-size: 12px; margin-left: 8px; min-width: 45px; text-align: right; }
+  .conf-high { color: #4ade80; }
+  .conf-med { color: #facc15; }
+  .conf-low { color: #f87171; }
+  .conf-tbd { color: #666; }
+  .upset { background: #2a1a1a !important; border-left: 3px solid #f87171; }
+  .final-four { grid-column: 1 / -1; background: linear-gradient(135deg, #1a1a3a, #2a1a2a); border: 1px solid #4a3a5a; }
+  .champion { text-align: center; padding: 20px; font-size: 24px; font-weight: 700; color: #fbbf24; }
+  .champion .seed-big { font-size: 16px; color: #888; }
+  .legend { display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 12px; color: #888; }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .agree { font-size: 11px; color: #555; margin-left: 4px; }
+</style>
+</head>
+<body>
+<h1>2026 March Madness Bracket Predictions</h1>
+<p class="subtitle">Specialist Stacking Ensemble (XGB + LGB-Close + LR-Late + RF) + Conformal Prediction</p>
+<div class="bracket-container">
+<div class="region">
+<div class="region-title" style="color: #60a5fa">EAST REGION</div>
+<div class="round"><div class="round-title">Round of 64</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Duke</span><span class="vs">vs</span><span class="seed">16</span><span class="team loser">Siena</span><span class="prob conf-high">92%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">8</span><span class="team loser">Ohio St.</span><span class="vs">vs</span><span class="seed">9</span><span class="team winner">TCU</span><span class="prob conf-med">57%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">5</span><span class="team winner">St. John's</span><span class="vs">vs</span><span class="seed">12</span><span class="team loser">Northern Iowa</span><span class="prob conf-med">69%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">4</span><span class="team winner">Kansas</span><span class="vs">vs</span><span class="seed">13</span><span class="team loser">California Baptist</span><span class="prob conf-high">75%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">6</span><span class="team loser">Louisville</span><span class="vs">vs</span><span class="seed">11</span><span class="team winner">South Fla.</span><span class="prob conf-med">61%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Michigan St.</span><span class="vs">vs</span><span class="seed">14</span><span class="team loser">North Dakota St.</span><span class="prob conf-high">81%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">7</span><span class="team loser">UCLA</span><span class="vs">vs</span><span class="seed">10</span><span class="team winner">UCF</span><span class="prob conf-med">61%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">UConn</span><span class="vs">vs</span><span class="seed">15</span><span class="team loser">Furman</span><span class="prob conf-high">86%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Round of 32</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Duke</span><span class="vs">vs</span><span class="seed">9</span><span class="team loser">TCU</span><span class="prob conf-high">84%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">4</span><span class="team loser">Kansas</span><span class="vs">vs</span><span class="seed">5</span><span class="team winner">St. John's</span><span class="prob conf-low">53%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Michigan St.</span><span class="vs">vs</span><span class="seed">11</span><span class="team loser">South Fla.</span><span class="prob conf-high">72%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">UConn</span><span class="vs">vs</span><span class="seed">10</span><span class="team loser">UCF</span><span class="prob conf-high">76%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Sweet 16</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Duke</span><span class="vs">vs</span><span class="seed">5</span><span class="team loser">St. John's</span><span class="prob conf-high">74%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">2</span><span class="team loser">UConn</span><span class="vs">vs</span><span class="seed">3</span><span class="team winner">Michigan St.</span><span class="prob conf-low">57%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Elite 8</div>
+<div class="game upset"><span class="seed">1</span><span class="team loser">Duke</span><span class="vs">vs</span><span class="seed">3</span><span class="team winner">Michigan St.</span><span class="prob conf-med">67%</span><span class="agree">4/4</span></div>
+</div>
+</div>
+<div class="region">
+<div class="region-title" style="color: #f472b6">WEST REGION</div>
+<div class="round"><div class="round-title">Round of 64</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona</span><span class="vs">vs</span><span class="seed">16</span><span class="team loser">Long Island</span><span class="prob conf-high">91%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">8</span><span class="team loser">Villanova</span><span class="vs">vs</span><span class="seed">9</span><span class="team winner">Utah St.</span><span class="prob conf-low">50%</span><span class="agree">0/4</span></div>
+<div class="game"><span class="seed">5</span><span class="team winner">Wisconsin</span><span class="vs">vs</span><span class="seed">12</span><span class="team loser">High Point</span><span class="prob conf-med">71%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">4</span><span class="team winner">Arkansas</span><span class="vs">vs</span><span class="seed">13</span><span class="team loser">Hawaii</span><span class="prob conf-high">75%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">6</span><span class="team winner">BYU</span><span class="vs">vs</span><span class="seed">11</span><span class="team loser">TBD_West11</span><span class="prob conf-tbd">50%</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Gonzaga</span><span class="vs">vs</span><span class="seed">14</span><span class="team loser">Kennesaw St.</span><span class="prob conf-high">86%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">7</span><span class="team loser">Miami (FL)</span><span class="vs">vs</span><span class="seed">10</span><span class="team winner">Missouri</span><span class="prob conf-med">61%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Purdue</span><span class="vs">vs</span><span class="seed">15</span><span class="team loser">Queens</span><span class="prob conf-high">86%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Round of 32</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona</span><span class="vs">vs</span><span class="seed">9</span><span class="team loser">Utah St.</span><span class="prob conf-high">79%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">4</span><span class="team loser">Arkansas</span><span class="vs">vs</span><span class="seed">5</span><span class="team winner">Wisconsin</span><span class="prob conf-low">52%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Gonzaga</span><span class="vs">vs</span><span class="seed">6</span><span class="team loser">BYU</span><span class="prob conf-high">72%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Purdue</span><span class="vs">vs</span><span class="seed">10</span><span class="team loser">Missouri</span><span class="prob conf-med">69%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Sweet 16</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona</span><span class="vs">vs</span><span class="seed">5</span><span class="team loser">Wisconsin</span><span class="prob conf-high">72%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">2</span><span class="team loser">Purdue</span><span class="vs">vs</span><span class="seed">3</span><span class="team winner">Gonzaga</span><span class="prob conf-low">52%</span><span class="agree">1/4</span></div>
+</div>
+<div class="round"><div class="round-title">Elite 8</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona</span><span class="vs">vs</span><span class="seed">3</span><span class="team loser">Gonzaga</span><span class="prob conf-med">69%</span><span class="agree">4/4</span></div>
+</div>
+</div>
+<div class="region">
+<div class="region-title" style="color: #4ade80">SOUTH REGION</div>
+<div class="round"><div class="round-title">Round of 64</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Florida</span><span class="vs">vs</span><span class="seed">16</span><span class="team loser">TBD_South16</span><span class="prob conf-tbd">50%</span></div>
+<div class="game upset"><span class="seed">8</span><span class="team loser">Clemson</span><span class="vs">vs</span><span class="seed">9</span><span class="team winner">Iowa</span><span class="prob conf-low">54%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">5</span><span class="team winner">Vanderbilt</span><span class="vs">vs</span><span class="seed">12</span><span class="team loser">McNeese</span><span class="prob conf-med">69%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">4</span><span class="team winner">Nebraska</span><span class="vs">vs</span><span class="seed">13</span><span class="team loser">Troy</span><span class="prob conf-high">83%</span><span class="agree">2/4</span></div>
+<div class="game"><span class="seed">6</span><span class="team winner">North Carolina</span><span class="vs">vs</span><span class="seed">11</span><span class="team loser">VCU</span><span class="prob conf-med">65%</span><span class="agree">3/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Illinois</span><span class="vs">vs</span><span class="seed">14</span><span class="team loser">Penn</span><span class="prob conf-high">86%</span><span class="agree">3/4</span></div>
+<div class="game upset"><span class="seed">7</span><span class="team loser">Saint Mary's</span><span class="vs">vs</span><span class="seed">10</span><span class="team winner">Texas A&M</span><span class="prob conf-med">61%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Houston</span><span class="vs">vs</span><span class="seed">15</span><span class="team loser">Idaho</span><span class="prob conf-high">89%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Round of 32</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Florida</span><span class="vs">vs</span><span class="seed">9</span><span class="team loser">Iowa</span><span class="prob conf-high">82%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">4</span><span class="team winner">Nebraska</span><span class="vs">vs</span><span class="seed">5</span><span class="team loser">Vanderbilt</span><span class="prob conf-med">61%</span><span class="agree">3/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Illinois</span><span class="vs">vs</span><span class="seed">6</span><span class="team loser">North Carolina</span><span class="prob conf-med">59%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Houston</span><span class="vs">vs</span><span class="seed">10</span><span class="team loser">Texas A&M</span><span class="prob conf-high">80%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Sweet 16</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Florida</span><span class="vs">vs</span><span class="seed">4</span><span class="team loser">Nebraska</span><span class="prob conf-high">74%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Houston</span><span class="vs">vs</span><span class="seed">3</span><span class="team loser">Illinois</span><span class="prob conf-low">64%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Elite 8</div>
+<div class="game upset"><span class="seed">1</span><span class="team loser">Florida</span><span class="vs">vs</span><span class="seed">2</span><span class="team winner">Houston</span><span class="prob conf-low">61%</span><span class="agree">4/4</span></div>
+</div>
+</div>
+<div class="region">
+<div class="region-title" style="color: #facc15">MIDWEST REGION</div>
+<div class="round"><div class="round-title">Round of 64</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Michigan</span><span class="vs">vs</span><span class="seed">16</span><span class="team loser">Howard</span><span class="prob conf-high">94%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">8</span><span class="team loser">Georgia</span><span class="vs">vs</span><span class="seed">9</span><span class="team winner">Saint Louis</span><span class="prob conf-med">63%</span><span class="agree">3/4</span></div>
+<div class="game"><span class="seed">5</span><span class="team winner">Texas Tech</span><span class="vs">vs</span><span class="seed">12</span><span class="team loser">Akron</span><span class="prob conf-high">74%</span><span class="agree">3/4</span></div>
+<div class="game"><span class="seed">4</span><span class="team winner">Alabama</span><span class="vs">vs</span><span class="seed">13</span><span class="team loser">Hofstra</span><span class="prob conf-high">76%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">6</span><span class="team winner">Tennessee</span><span class="vs">vs</span><span class="seed">11</span><span class="team loser">TBD_MW11</span><span class="prob conf-tbd">50%</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Virginia</span><span class="vs">vs</span><span class="seed">14</span><span class="team loser">Wright St.</span><span class="prob conf-high">86%</span><span class="agree">3/4</span></div>
+<div class="game upset"><span class="seed">7</span><span class="team loser">Kentucky</span><span class="vs">vs</span><span class="seed">10</span><span class="team winner">Santa Clara</span><span class="prob conf-med">61%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Iowa St.</span><span class="vs">vs</span><span class="seed">15</span><span class="team loser">Tennessee St.</span><span class="prob conf-high">86%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Round of 32</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Michigan</span><span class="vs">vs</span><span class="seed">9</span><span class="team loser">Saint Louis</span><span class="prob conf-high">83%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">4</span><span class="team loser">Alabama</span><span class="vs">vs</span><span class="seed">5</span><span class="team winner">Texas Tech</span><span class="prob conf-low">52%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">3</span><span class="team winner">Virginia</span><span class="vs">vs</span><span class="seed">6</span><span class="team loser">Tennessee</span><span class="prob conf-med">65%</span><span class="agree">4/4</span></div>
+<div class="game"><span class="seed">2</span><span class="team winner">Iowa St.</span><span class="vs">vs</span><span class="seed">10</span><span class="team loser">Santa Clara</span><span class="prob conf-high">76%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Sweet 16</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Michigan</span><span class="vs">vs</span><span class="seed">5</span><span class="team loser">Texas Tech</span><span class="prob conf-high">72%</span><span class="agree">4/4</span></div>
+<div class="game upset"><span class="seed">2</span><span class="team loser">Iowa St.</span><span class="vs">vs</span><span class="seed">3</span><span class="team winner">Virginia</span><span class="prob conf-low">63%</span><span class="agree">3/4</span></div>
+</div>
+<div class="round"><div class="round-title">Elite 8</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Michigan</span><span class="vs">vs</span><span class="seed">3</span><span class="team loser">Virginia</span><span class="prob conf-high">75%</span><span class="agree">4/4</span></div>
+</div>
+</div>
+<div class="region final-four">
+<div class="region-title" style="color: #c084fc">FINAL FOUR & CHAMPIONSHIP</div>
+<div class="round"><div class="round-title">Final Four</div>
+<div class="game"><span class="seed">2</span><span class="team winner">Houston <small style="color:#666">(East)</small></span><span class="vs">vs</span><span class="seed">3</span><span class="team loser">Michigan St. <small style="color:#666">(South)</small></span><span class="prob conf-high">68%</span><span class="agree">3/4</span></div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona <small style="color:#666">(West)</small></span><span class="vs">vs</span><span class="seed">1</span><span class="team loser">Michigan <small style="color:#666">(Midwest)</small></span><span class="prob conf-med">56%</span><span class="agree">4/4</span></div>
+</div>
+<div class="round"><div class="round-title">Championship</div>
+<div class="game"><span class="seed">1</span><span class="team winner">Arizona</span><span class="vs">vs</span><span class="seed">2</span><span class="team loser">Houston</span><span class="prob conf-med">63%</span></div>
+</div>
+<div class="champion"><div>PREDICTED CHAMPION</div><div style="font-size:32px; margin-top:10px;">(1) Arizona</div><div class="conf-med" style="font-size:14px; margin-top:5px;">Confidence: 63.3% [MED]</div></div>
+</div>
+</div>
+<div class="legend">
+  <span><span class="legend-dot" style="background:#4ade80"></span> HIGH confidence</span>
+  <span><span class="legend-dot" style="background:#facc15"></span> MED confidence</span>
+  <span><span class="legend-dot" style="background:#f87171"></span> LOW confidence</span>
+  <span><span class="legend-dot" style="background:#f87171; opacity:0.5"></span> Upset pick</span>
+</div>
+</body>
+</html>
